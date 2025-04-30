@@ -15,8 +15,9 @@ jobs:
     - name: Log in to Docker Hub
       run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
 
+
     - name: Build Docker image
-      run: docker build -t yuliia2205/mysite .
+      run: docker build -t ynadakhivska/yuliia2205 .
 
     - name: Push to Docker Hub
-      run: docker push yuliia2205/mysite
+      run: docker push ynadakhivska/yuliia2205
